@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Laboratório Softhard</title>
+        <link rel="shortcut icon" href="./assets/img/favicon-softlab.ico" type="image/x-icon">
+        <!-- Framework7 CSS -->
+        <link type="text/css" rel="stylesheet" href="./assets/css/framework7-bundle.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+        <!-- Custom CSS -->
+        <link type="text/css" rel="stylesheet" href="./assets/css/index.css" />
+        <!-- Remixicons  -->
+        <link type="text/css" rel="stylesheet" href="./assets/css/remixicons/remixicon.css" />
+    </head>
+
+    <body>
+        <!-- App root element -->
+        <div id="app">
+            <!-- Your main view -->
+            <div class="view view-main">
+                <!-- Page, data-name contains page name -->
+                <div data-name="service" class="page">
+                    <!-- Top Navbar -->
+                    <div class="navbar">
+                        <div class="navbar-inner sliding align-items-center">
+                            <a href="/index/" class="logo left">
+                                <img src="./assets/img/icon-softlab.jpg" alt="logotipo laboratório softhard"
+                                    class="logo" width="50px" height="50px" loading="lazy">
+                            </a>
+
+                            <div class="right menu-logo-top">
+                                <a onclick="openChallengeus()"><i class="ri-flag-2-line"></i></a>
+                                <a class="link popover-open" data-popover=".popover-menu"><i
+                                        class="ri-menu-fill"></i></a>
+                            </div>
+                            <div class="subnavbar">
+                                <div class="subnavbar-inner">
+                                    <div class="subnavbar-title margin-left">Nossos Serviços</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
+                        <div class="block">
+                            <!-- Swiper -->
+                            <div class="swiper mySwiper margin">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide ">
+                                        <i class="ri-android-line"></i>
+                                        <h3>Aplicativos Mobile</h3>
+
+                                        <span>
+                                            Criamos aplicativos mobile que combinam inovação e
+                                            funcionalidade para oferecer experiências excepcionais em
+                                            smartphones e tablets.
+                                        </span>
+
+                                        <button class="button button-fill margin-top"
+                                            @click=${openVerticalButtons}>Pedir Serviço</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <i class="ri-computer-line"></i>
+                                        <h3>Aplicativos Desktop</h3>
+                                        <span>
+                                            Desenvolvemos aplicações desktop personalizadas, criadas para melhorar a
+                                            produtividade e
+                                            proporcionar uma experiência de utilizador fluida em qualquer sistema
+                                            operativo.
+                                        </span>
+                                        <button class="button button-fill margin-top"
+                                            @click=${openVerticalButtons}>Pedir Serviço</button>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <i class="ri-database-line"></i>
+                                        <h3>Gestão de Bancos de Dados</h3>
+                                        <span>
+                                            Oferecemos soluções eficazes para a gestão de bases de dados, assegurando o
+                                            acesso rápido
+                                            e seguro às informações essenciais para o seu negócio.
+                                        </span>
+                                        <button class="button button-fill margin-top"
+                                            @click=${openVerticalButtons}>Pedir Serviço</button>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <i class="ri-server-line"></i>
+                                        <h3>Manutenção de Bancos de Dados</h3>
+                                        <span>
+                                            Garantimos a integridade e otimização dos seus bancos de dados através de
+                                            manutenções
+                                            periódicas e ajustes necessários.
+                                        </span>
+                                        <button class="button button-fill margin-top"
+                                            @click=${openVerticalButtons}>Pedir Serviço</button>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <i class="ri-tools-line"></i>
+                                        <h3>Manutenção de Aplicativos de Gestão</h3>
+                                        <span>
+                                            Prestamos serviços de manutenção para aplicativos de gestão, assegurando o
+                                            seu desempenho
+                                            contínuo e adaptabilidade a novas necessidades.
+                                        </span>
+                                        <button class="button button-fill margin-top"
+                                            @click=${openVerticalButtons}>Pedir Serviço</button>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <i class="ri-window-line"></i>
+                                        <h3>Manutenção de Websites</h3>
+                                        <span>
+                                            Cuidamos da manutenção do seu website, garantindo que permanece atualizado,
+                                            rápido e seguro,
+                                            proporcionando sempre a melhor experiência ao utilizador.
+                                        </span>
+                                        <button class="button button-fill margin-top"
+                                            @click=${openVerticalButtons}>Pedir Serviço</button>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <i class="ri-global-line"></i>
+                                        <h3>Criação de Websites</h3>
+                                        <span>
+                                            Desenvolvemos websites profissionais, focados na usabilidade e design
+                                            responsivo,
+                                            para garantir uma presença digital impactante e eficiente.
+                                        </span>
+                                        <button class="button button-fill margin-top"
+                                            @click=${openVerticalButtons}>Pedir Serviço</button>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <i class="ri-computer-line"></i>
+                                        <h3>Suporte Técnico para Computadores</h3>
+                                        <span>
+                                            Oferecemos suporte técnico especializado para resolver problemas de hardware
+                                            e software,
+                                            garantindo o funcionamento pleno dos seus equipamentos.
+                                        </span>
+                                        <button class="button button-fill margin-top"
+                                            @click=${openVerticalButtons}>Pedir Serviço</button>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <i class="ri-cloud-line"></i>
+                                        <h3>Gestão de Domínios e Hospedagem</h3>
+                                        <span>
+                                            Gerimos o seu domínio e hospedagem de forma eficiente, assegurando que o seu
+                                            site está sempre
+                                            disponível e com desempenho otimizado.
+                                        </span>
+                                        <button class="button button-fill margin-top"
+                                            @click=${openVerticalButtons}>Pedir Serviço</button>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <i class="ri-chat-check-line"></i>
+                                        <h3>Consultoria em Serviços</h3>
+                                        <span>
+                                            Fornecemos consultoria especializada em todos os nossos serviços, ajudando a
+                                            encontrar
+                                            as melhores soluções para as necessidades do seu negócio.
+                                        </span>
+                                        <button class="button button-fill margin-top"
+                                            @click=${openVerticalButtons}>Pedir Serviço</button>
+                                    </div>
+
+                                </div>
+
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+
+                        <div class="block margin-top myapp_service_includ-block">
+                            <div class="myapp_service_includ">
+                                <div class="myapp_service_includ_title">
+                                    <span>Oferta padrão</span>
+                                    <h2>Todos os nossos serviços incluem</h2>
+                                </div>
+                                <div class="myapp_serive_includ_item">
+                                    <i class="ri-customer-service-2-line"></i>
+                                    <h2>Abordagem Centrada no Cliente</h2>
+                                    <p>
+                                        Mantemos uma comunicação clara e aberta com você, garantindo que suas
+                                        necessidades sejam atendidas e criando uma parceria de longo prazo.
+                                    </p>
+                                </div>
+                                <div class="myapp_serive_includ_item">
+                                    <i class="ri-lightbulb-flash-line"></i>
+                                    <h2>Inovação e Qualidade</h2>
+                                    <p>
+                                        Utilizamos as tecnologias mais modernas para criar soluções de alta qualidade,
+                                        assegurando que você receba o melhor produto possível. </p>
+                                </div>
+                                <div class="myapp_serive_includ_item">
+                                    <i class="ri-shield-check-line"></i>
+                                    <h2>Segurança e Conformidade</h2>
+                                    <p>
+                                        Protegemos seus dados com as melhores práticas de segurança e seguimos todas as
+                                        regulamentações, como a Lei de Proteção de Dados Pessoais (LPDP).
+                                    </p>
+                                </div>
+                                <div class="myapp_serive_includ_item">
+                                    <i class="ri-tools-line"></i>
+                                    <h2>Suporte e Manutenção</h2>
+                                    <p>
+                                        Oferecemos suporte técnico contínuo e mantemos seus sistemas atualizados para
+                                        garantir que tudo funcione perfeitamente.
+                                    </p>
+                                </div>
+                                <div class="myapp_serive_includ_item">
+                                    <i class="ri-book-open-line"></i>
+                                    <h2>Documentação e Treinamento</h2>
+                                    <p>
+                                        Fornecemos manuais detalhados e treinamentos para que sua equipe saiba como usar
+                                        e manter nossos sistemas com facilidade.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer -->
+                        <footer class="myappfooter">
+                            <div class="myapp-footer-container">
+                                <div class="myappfooter-links">
+                                    <!-- Links à esquerda -->
+                                    <div class="myappfooter-left">
+                                        <a href="/privacy-policy/">Política de Privacidade |</a>
+                                        <a href="/about/" class="link">Sobre nós</a>
+                                    </div>
+                                    <!-- Links à direita -->
+                                    <div class="myappfooter-right padding-right">
+                                        <a rel="noopener" target="_blank" class="external"
+                                            href="https://www.instagram.com/softhard_ao?igsh=MzRlODBiNWFlZA==">Softhard</a>
+                                        <a rel="noopener" href="https://academiasofthard.company.site/" target="_blank"
+                                            class="external">Academia Softhard</a>
+                                        <a rel="noopener"
+                                            href="https://www.facebook.com/profile.php?id=61563833176579&mibextid=LQQJ4d"
+                                            target="_blank" class="external"><i class="ri-facebook-circle-fill"></i></a>
+                                        <a rel="noopener"
+                                            href="https://www.instagram.com/laboratoriosofthard_ao/?utm_source=ig_web_button_share_sheet"
+                                            target="_blank" class="external"> <i class="ri-instagram-fill"></i></a>
+                                        <a rel="noopener" href="https://www.linkedin.com/company/laboratório-softhard"
+                                            target="_blank" class="external"><i class="ri-linkedin-box-fill"></i></a>
+                                        <a rel="noopener" href="mailto:laboratorio@softhard.it.ao" target="_blank"
+                                            class="external"><i class="ri-mail-fill"></i></a>
+                                        <a rel="noopener" href="tel:+244933001801" target="_blank" class="external"><i
+                                                class="ri-phone-fill"></i></a>
+                                    </div>
+                                </div>
+                                <!-- Copyright -->
+                                <div class="myappfooter-copyright">
+                                    <p>&copy; 2024 Laboratório Softhard. Todos os direitos reservados.</p>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="popover popover-menu">
+            <div class="popover-angle"></div>
+            <div class="popover-inner">
+                <div class="list">
+                    <ul>
+                        <li><a href="/service/" class="list-button popover-close">SERVIÇOS</a></li>
+                        <li><a rel="noopener" target="_blank" href="https://wa.link/4dkhgx"
+                                class="external list-button popover-close">CONTACTAR</a></li>
+                        <li><a href="/career/" class="list-button popover-close">SOFTCAEER</a></li>
+                        <li><a onclick="openChallengeus()" class="list-button popover-close challenge">DESAFIE-NOS</a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Framework7 JS -->
+        <script type="text/javascript" src="./assets/js/lib/framework7-bundle.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/framework7/7.0.14/framework7.bundle.min.js"></script>
+        <!-- JQuery -->
+        <script type="text/javascript" src="./assets/js/lib/jquery-3.7.1.js"></script>
+        <!-- Custom JS -->
+        <script src="./assets/js/router.js"></script>
+    </body>
+
+</html>

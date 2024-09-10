@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório Softhard</title>
+    <link rel="shortcut icon" href="./assets/img/favicon-softlab.ico" type="image/x-icon">
+    <!-- Framework7 CSS -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/framework7-bundle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+    <!-- Custom CSS -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/index.css" />
+    <!-- Remixicons  -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/remixicons/remixicon.css" />
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+        <!-- Your main view -->
+        <div class="view view-main">
+            <!-- Page, data-name contains page name -->
+            <div data-name="career" class="page">
+                <!-- Top Navbar -->
+                <div class="navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner sliding align-items-center">
+                        <a href="/index/" class="logo left">
+                            <img src="./assets/img/icon-softlab.jpg" alt="logotipo laboratório softhard" class="logo" width="50px" height="50px" loading="lazy">
+                        </a>
+
+                        <div class="right menu-logo-top">
+                            <a onclick="openChallengeus()"><i class="ri-flag-2-line"></i></a>
+                            <a class="link popover-open" data-popover=".popover-menu"><i class="ri-menu-fill"></i></a>
+                        </div>
+                        <div class="subnavbar">
+                            <div class="subnavbar-inner">
+                                <div class="subnavbar-title margin-left">softCareer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <!-- Formulario com barra de progresso -->
+                    <div class="site">
+                        <div class="form-box">
+                            <div class="progress">
+                                <ul class="progress-steps">
+                                    <li class="step active">
+                                        <span>A</span>
+                                        <p>Informações Pessoais <br> <span>25 segundos para completar</span></p>
+                                    </li>
+                                    <li class="step">
+                                        <span>B</span>
+                                        <p>Posição e Disponibilidade <br> <span>60 segundos para completar</span></p>
+                                    </li>
+                                    <li class="step">
+                                        <span>C</span>
+                                        <p>Experiência e Habilidades <br> <span>60 segundos para completar</span></p>
+                                    </li>
+                                    <li class="step">
+                                        <span>D</span>
+                                        <p>Envio de CV <br> <span>30 segundos para completar</span></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <form enctype="multipart/form-data" id="form-softcareer">
+                                <div class="form-one form-step active">
+                                    <div class="bg-svg"></div>
+                                    <h2>Informações Pessoais e de Contato</h2>
+                                    <p>Preencha o formulário com informações corretas</p>
+                                    <div>
+                                        <label for="full-name">Nome completo</label>
+                                        <input type="text" id="full-name" name="full-name" placeholder="Digite o seu nome completo" required>
+                                    </div>
+                                    <div>
+                                        <label for="email">Endereço de Email</label>
+                                        <input type="email" id="email" name="email" placeholder="Digite o seu email" required autocomplete="email">
+                                    </div>
+                                    <div>
+                                        <label for="phone">Número de Telefone</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="Digite o seu número de telefone" required autocomplete="tel">
+                                    </div>
+                                </div>
+                                <div class="form-two form-step">
+                                    <div class="bg-svg"></div>
+                                    <h2>Posição Desejada e Disponibilidade</h2>
+                                    <div>
+                                        <label for="atuaction">Qual área de atuação procura?</label>
+                                        <select name="atuaction" id="atuaction" required>
+                                            <option value="">Selecione uma área</option>
+                                            <option value="web">Desenvolvimento Web</option>
+                                            <option value="desktop">Desenvolvimento Desktop</option>
+                                            <option value="mobile">Desenvolvimento Mobile</option>
+                                            <option value="manutencao-app">Manutenção de Apps</option>
+                                            <option value="manutencao-db">Manutenção de Banco de Dados</option>
+                                            <option value="gestão de dominios">Suporte em dominios e hospedagem</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="availability">Disponibilidade de Trabalho</label>
+                                        <select name="availability" id="availability" required>
+                                            <option value="">Selecione uma opção</option>
+                                            <option value="full-time">Full-time</option>
+                                            <option value="part-time">Part-time</option>
+                                            <option value="freelancer">Freelancer</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-three form-step">
+                                    <div class="bg-svg"></div>
+                                    <h2>Experiência e Habilidades</h2>
+                                    <div>
+                                        <label for="experience">Anos de experiência na área</label>
+                                        <input type="number" id="experience" name="experience" min="0" max="50" placeholder="Digite o nº de anos de experiência, 0 caso não tiver" required>
+                                    </div>
+                                    <div>
+                                        <label>Cite até três projetos relevantes</label>
+                                        <textarea name="projects" placeholder="Descreva brevemente os projetos e o seu papel(opcional)" rows="4"></textarea>
+                                    </div>
+                                    <div>
+                                        <label for="skills">Habilidades técnicas</label>
+                                        <input type="text" id="skills" name="skills" placeholder="Liste as linguagens de programação e frameworks que domina" required>
+                                    </div>
+                                    <div>
+                                        <label for="githubLink">Link do GitHub ou Portfólio</label>
+                                        <input type="url" id="githubLink" name="githubLink" placeholder="Insira o link do seu GitHub ou portfólio online(opcional)">
+                                    </div>
+                                </div>
+                                <div class="form-four form-step">
+                                    <div class="bg-svg"></div>
+                                    <div>
+                                        <label for="salary">Pretensão Salarial</label>
+                                        <input type="number" id="salary" name="salary" placeholder="Digite a sua pretensão salarial (Kzs)" required step="0.01">
+                                    </div>
+                                    <div class="birth">
+                                        <label>Disponibilidade para início</label>
+                                        <div class="grouping">
+                                            <input type="number" name="day" min="1" max="31" placeholder="Dia" required>
+                                            <input type="number" name="month" min="1" max="12" placeholder="Mês" required>
+                                            <input type="number" name="year" min="2024" max="2050" placeholder="Ano" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-group">
+                                    <button type="button" class="btn-prev" disabled>Voltar</button>
+                                    <button type="button" class="btn-next">Próximo Passo</button>
+                                    <button type="submit" class="btn-submit">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <footer class="myappfooter">
+                    <div class="myapp-footer-container">
+                        <div class="myappfooter-links">
+                            <!-- Links à esquerda -->
+                            <div class="myappfooter-left">
+                                <a href="#politica-privacidade">Política de Privacidade</a>
+                                <a href="#politica-cookies">Política de Cookies</a>
+                                <a href="/about/" class="link">Sobre nós</a>
+                            </div>
+                            <!-- Links à direita -->
+                            <div class="myappfooter-right">
+                                <a rel="noopener" target="_blank" href="https://www.instagram.com/softhard_ao?igsh=MzRlODBiNWFlZA==" class="external">Softhard</a>
+                                <a rel="noopener" href="https://academiasofthard.company.site/" target="_blank" class="external">Academia Softhard</a>
+                                <a rel="noopener" href="https://www.facebook.com/profile.php?id=61563833176579&mibextid=LQQJ4d" target="_blank" class="external"><i class="ri-facebook-circle-fill"></i></a>
+                                <a rel="noopener" href="https://www.instagram.com/laboratoriosofthard_ao/?utm_source=ig_web_button_share_sheet" target="_blank" class="external"> <i class="ri-instagram-fill"></i></a>
+                                <a rel="noopener" href="https://www.linkedin.com/company/laboratório-softhard" target="_blank" class="external"><i class="ri-linkedin-box-fill"></i></a>
+                            </div>
+                        </div>
+                        <!-- Copyright -->
+                        <div class="myappfooter-copyright">
+                            <p>&copy; 2024 Laboratório Softhard. Todos os direitos reservados.</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <div class="popover popover-menu">
+        <div class="popover-angle"></div>
+        <div class="popover-inner">
+          <div class="list">
+            <ul>
+              <li><a href="/service/" class="list-button popover-close">SERVIÇOS</a></li>
+              <li><a rel="noopener" target="_blank" href="https://wa.link/4dkhgx" class="external list-button popover-close">CONTACTAR</a></li>
+              <li><a href="/career/" class="list-button popover-close">SOFTCAEER</a></li>
+              <li><a onclick="openChallengeus()" class="list-button popover-close challenge">DESAFIE-NOS</a>
+              </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    <!-- Framework7 JS -->
+    <script type="text/javascript" src="./assets/js/lib/framework7-bundle.js"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="./assets/js/lib/jquery-3.7.1.js"></script>
+    <!-- Custom JS -->
+    <script src="./assets/js/router.js"></script>
+    <script src="./assets/js/form.js"></script>
+</body>
+
+</html>

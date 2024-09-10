@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório Softhard</title>
+    <link rel="shortcut icon" href="./assets/img/favicon-softlab.ico" type="image/x-icon">
+    <!-- Framework7 CSS -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/framework7-bundle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+    <!-- Custom CSS -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/index.css" />
+    <!-- Remixicons  -->
+    <link type="text/css" rel="stylesheet" href="./assets/css/remixicons/remixicon.css" />
+  </head>
+
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <!-- Your main view -->
+      <div class="view view-main">
+        <!-- Page, data-name contains page name -->
+        <div data-name="index" class="page">
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-inner sliding align-items-center">
+              <a href="/index/" class="logo left">
+                <img src="./assets/img/icon-softlab.jpg" alt="logotipo laboratório softhard" class="logo" width="50px"
+                  height="50px" loading="lazy">
+              </a>
+
+              <div class="right menu-logo-top">
+                <a onclick="openChallengeus()"><i class="ri-flag-2-line"></i></a>
+                <a class="link popover-open" data-popover=".popover-menu"><i class="ri-menu-fill"></i></a>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Scrollable page content -->
+          <div class="page-content">
+
+            <div class="myapp-banner ">
+              <div class="myapp-banner__section">
+                <div class="myapp-global_agency ">
+                  <i class="ri-map-pin-line"></i>
+                  <h3>Luanda, Angola</h3>
+                </div>
+                <h2 class="myapp-header_text">
+                  <span>24/24h</span> A transformar <br><span>Marcas</span> em <span>Produtos<br> Digitais</span>
+                  inovadores.
+                </h2>
+                <p>
+                  Quer tenha um negócio ou esteja à procura de soluções que facilitem o seu dia a dia,
+                  estamos aqui para criar algo especial e impactante para si.
+                </p>
+                <div class="myapp-links-button ">
+                  <a class="myapp-link-button" onclick="openChallengeus()">
+                    Desafie-nos!
+                    <i class="ri-arrow-right-line"></i>
+                  </a>
+                  <a class="myapp-link-button b" onclick="OpenAlertDemo()">
+                    <i class="ri-play-circle-line"></i> Ver demo
+                  </a>
+                </div>
+
+              </div>
+
+              <div class="myapp-banner__section myapp-banner-right">
+                <div class="myapp-services ">
+                  <h4 class="myapp-services_tittle">Temos para si</h4>
+                  <div class="myapp-service__list" id="service__list">
+                    <a class="myapp-list__item">
+                      <i class="ri-settings-2-line"></i>
+                      <div class="myapp-service__name">
+                        <h4>Soluções Sob Medida</h4>
+                      </div>
+                    </a>
+
+                    <a class="myapp-list__item">
+                      <i class="ri-customer-service-2-line"></i>
+                      <div class="myapp-service__name">
+                        <h4>Suporte Dedicado</h4>
+                      </div>
+                    </a>
+
+                    <a class="myapp-list__item">
+                      <i class="ri-pie-chart-2-line"></i>
+                      <div class="myapp-service__name">
+                        <h4>Consultoria Especializada</h4>
+                      </div>
+                    </a>
+
+                  </div>
+                </div>
+
+                <div class="myapp-projects ">
+                  <div class="myapp-projects__status ">
+                    <div class="myapp-projects__status__text">
+                      <span class="counter" data-target="5">0+</span>
+                      <p>Problemas resolvidos com as nossas soluções.</p>
+                    </div>
+                  </div>
+                  <div class="myapp-projects__status ">
+                    <img src="./assets/img/homen-no-escritorio.jpg" alt="homen-escritorio" loading="lazy">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <section class="myapp-container">
+              <div class="myapp-colum myapp-company ">
+                <h3>
+                  Temos os melhores <br>
+                  parceiros do mercado
+                </h3>
+                <p>
+                  Utilizamos as melhores tecnologias e
+                  ferramentas disponíveis,
+                  garantindo soluções robustas e inovadoras para si.
+                </p>
+              </div>
+              <div class="myapp-colum myapp-company__logo ">
+                <i class="ri-gemini-line"></i>
+                <i class="ri-openai-fill"></i>
+                <i class="ri-firebase-line"></i>
+                <i class="ri-apple-line"></i>
+                <i class="ri-android-line"></i>
+                <i class="ri-windows-fill"></i>
+
+              </div>
+            </section>
+
+            <div class="myapp-why_us_section " id="solutions">
+
+              <div class="myapp-why_us_colum myapp-why_us_left ">
+                <img src="./assets/img/business-man-working-from-his-living-room.jpg" alt="homem usando o pc"
+                  loading="lazy">
+              </div>
+
+              <div class="myapp-why_us_colum myapp-why_us_right ">
+                <h4>Porquê nos escolher? </h4>
+                <h2>
+                  Cada produto nosso <br>
+                  tem voz própria!
+                </h2>
+                <p>
+                  O Laboratório Softhard se dedica a redefinir a experiência tecnológica,
+                  unindo inovação e excelência para transformar a realidade digital em Angola, focada no impacto
+                  positivo e no atendimento impecável das necessidades de quem nos procura.
+                </p>
+                <a rel="noopener" target="_blank" class="external" href="https://wa.link/4dkhgx">Contactar agora</a>
+              </div>
+
+            </div>
+
+            <section class="myapp-team__member_section " id="team">
+              <div class="myapp-team__member__text ">
+                <h3>Os membros da equipa</h3>
+                <hr class="myapp-styled-hr">
+                <p>
+                  O Laboratório Softhard tem como principal objetivo melhorar os serviços globais de TI
+                  provedor, estabelecido com a visão de preencher a lacuna entre
+                  tecnologia de ponta e necessidades de consumo em Angola. Conheça agora a
+                  nossa equipa:
+                </p>
+              </div>
+
+              <div class="myapp-team__member__row ">
+                <div class="myapp-team__member__colum ">
+                  <img src="./assets/img/denilson.png" alt="team member" loading="lazy">
+                  <h3>Denilson Costa</h3>
+                  <p>Dir. Adminstrativo</p>
+                </div>
+                <div class="myapp-team__member__colum ">
+                  <img src="./assets/img/ab-photo.png" alt="team member" loading="lazy">
+                  <h3>André Bravo</h3>
+                  <p>Dir. Operacional</p>
+                </div>
+                <div class="myapp-team__member__colum ">
+                  <img src="./assets/img/Celestino.png" alt="team member" loading="lazy">
+                  <h3>Etienne Celestino</h3>
+                  <p>Sub-Dir. Operacional</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Sessão de perguntas e contacto  -->
+            <section class="myapp-faq-section ">
+              <div class="myapp-faq-colum">
+                <h2>
+                  Perguntas Frequentes
+                </h2>
+
+                <div class="myapp-faq-item">
+                  <hr>
+                  <h4 class="myapp-faq-question">O que vocês trazem de novo? <i class="ri-add-line"></i></h4>
+                  <p class="myapp-faq-answer">
+                    No Laboratório Softhard, estamos comprometidos em oferecer uma abordagem inovadora para resolver
+                    problemas do dia à dia. Uma das nossas principais novidades é a nossa área dedicada a desafios
+                    tecnológicos. Aqui, qualquer entidade, seja uma empresa ou não,
+                    pode descrever um problema ou desafio que enfrenta no seu dia à dia. A nossa equipe
+                    trabalhará para desenvolver uma solução tecnológica personalizada para esses desafios.
+                    Acreditamos
+                    que a colaboração com nossos usuários é fundamental para criar soluções eficazes e inovadoras.
+                    Se você
+                    tem um problema específico, compartilhe-o conosco, e ajudaremos a
+                    transformá-lo em uma solução prática e tecnológica! Clique na <strong>bandeira</strong>
+                  </p>
+                </div>
+
+                <div class="myapp-faq-item">
+                  <hr>
+                  <h4 class="myapp-faq-question">Quem são nossos clientes?<i class="ri-add-line"></i></h4>
+                  <p class="myapp-faq-answer">
+                    Nosso cliente é você que procura soluções inovadoras para simplificar o
+                    seu dia a dia. Criamos produtos que atendem a diversas necessidades e que podem ser
+                    automatizados com tecnologia, ajudando a resolver questões que atrasam a rotina diária.
+                  </p>
+                </div>
+
+                <div class="myapp-faq-item">
+                  <hr>
+                  <h4 class="myapp-faq-question">Quais são os métodos de pagamento aceitos? <i class="ri-add-line"></i>
+                  </h4>
+                  <p class="myapp-faq-answer">
+                    No nosso site, aceitamos diversas formas de pagamento. Após entrar
+                    em contacto connosco, discutiremos e acordaremos a forma de pagamento que melhor se adequa às
+                    suas necessidades. Entre os métodos disponíveis estão cartões de crédito, transferências bancárias e
+                    Multicaixa Express. Estamos à disposição para qualquer dúvida ou assistência adicional.
+                  </p>
+                </div>
+
+                <div class="myapp-faq-item">
+                  <hr>
+                  <h4 class="myapp-faq-question">Oferecem planos personalizados para empresas? <i
+                      class="ri-add-line"></i></h4>
+                  <p class="myapp-faq-answer">
+                    Sim, oferecemos planos personalizados que atendem às necessidades específicas de
+                    cada empresa. Nossa equipe de consultores irá trabalhar com você para entender seus
+                    objetivos e desafios, e então criar um plano que maximize os resultados. Entre em contato
+                    conosco através da seção <strong>Contactar </strong> iremos lhe responder.
+                  </p>
+                </div>
+
+              </div>
+
+              <div class="myapp-ask-colum">
+                <h2>Em que podemos ser úteis?</h2>
+                <p>Pode perguntar o que quiser saber sobre os nossos serviços</p>
+                <div class="form-box">
+                  <form enctype="multipart/form-data" id="form-duvidas">
+                    <div class="form-step active">
+                      <div>
+                        <label for="full-name">Nome</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Digite o seu nome" required>
+                      </div>
+                      <div>
+                        <label for="email">Endereço de Email</label>
+                        <input type="email" id="email" name="email" placeholder="Digite o seu email" autocomplete="email">
+                      </div>
+                      <div>
+                        <label for="phone">Número de Telefone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Digite o seu número de telefone" autocomplete="tel">
+                      </div>
+                      <div>
+                        <label>Conteúdo</label>
+                        <textarea name="projects" placeholder="Descreva aqui sua dúvida" rows="4" required></textarea>
+                      </div>
+                    </div>
+                    <div class="btn-group">
+                      <button type="submit" class="btn-next">Enviar</button>
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="myappfooter">
+              <div class="myapp-footer-container">
+                <div class="myappfooter-links">
+                  <!-- Links à esquerda -->
+                  <div class="myappfooter-left">
+                    <a href="/privacy-policy/">Política de Privacidade |</a>
+                    <a href="/about/" class="link">Sobre nós</a>
+                  </div>
+                  <!-- Links à direita -->
+                  <div class="myappfooter-right padding-right">
+                    <a rel="noopener" target="_blank" class="external"
+                      href="https://www.instagram.com/softhard_ao?igsh=MzRlODBiNWFlZA==">Softhard</a>
+                    <a rel="noopener" href="https://academiasofthard.company.site/" target="_blank"
+                      class="external">Academia Softhard</a>
+                    <a rel="noopener" href="https://www.facebook.com/profile.php?id=61563833176579&mibextid=LQQJ4d"
+                      target="_blank" class="external"><i class="ri-facebook-circle-fill"></i></a>
+                    <a rel="noopener"
+                      href="https://www.instagram.com/laboratoriosofthard_ao/?utm_source=ig_web_button_share_sheet"
+                      target="_blank" class="external"> <i class="ri-instagram-fill"></i></a>
+                    <a rel="noopener" href="https://www.linkedin.com/company/laboratório-softhard" target="_blank"
+                      class="external"><i class="ri-linkedin-box-fill"></i></a>
+                    <a rel="noopener" href="mailto:laboratorio@softhard.it.ao" target="_blank" class="external"><i
+                        class="ri-mail-fill"></i></a>
+                    <a rel="noopener" href="tel:+244933001801" target="_blank" class="external"><i
+                        class="ri-phone-fill"></i></a>
+                  </div>
+                </div>
+                <!-- Copyright -->
+                <div class="myappfooter-copyright">
+                  <p>&copy; 2024 Laboratório Softhard. Todos os direitos reservados.</p>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="popover popover-menu">
+      <div class="popover-angle"></div>
+      <div class="popover-inner">
+        <div class="list">
+          <ul>
+            <li><a href="/service/" class="list-button popover-close">SERVIÇOS</a></li>
+            <li><a rel="noopener" target="_blank" href="https://wa.link/4dkhgx" class="external list-button popover-close">CONTACTAR</a></li>
+            <li><a href="/career/" class="list-button popover-close">SOFTCAEER</a></li>
+            <li><a onclick="openChallengeus()" class="list-button popover-close challenge">DESAFIE-NOS</a>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Framework7 JS -->
+    <script type="text/javascript" src="./assets/js/lib/framework7-bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framework7/7.0.14/framework7.bundle.min.js"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="./assets/js/lib/jquery-3.7.1.js"></script>
+    <!-- Custom JS -->
+    <script src="./assets/js/router.js"></script>
+  </body>
+
+</html>
