@@ -13,7 +13,7 @@ require('dotenv').config();
 const app = express();
 
 const corsOptions = {
-  origin: [process.env.MyDominio],
+  origin: [ process.env.MyDominio || '*'],
   optionsSuccessStatus: 200
 };
 
@@ -22,10 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors(corsOptions));
 app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+app.use(bodyParser.json()); 
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, 
@@ -38,6 +35,9 @@ app.use('/api/contact', contactRoutes);
 app.use('/api/job', jobRoutes);
 app.use('/api/challenge', challengeRoutes);
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Servidor rodando na porta http://localhost:${PORT}`));
