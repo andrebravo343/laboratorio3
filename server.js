@@ -13,7 +13,7 @@ require('dotenv').config();
 const app = express();
 
 const corsOptions = {
-  origin: ['https://www.laboratorio.softhard.it.ao'], 
+  origin: [process.env.MyDominio],
   optionsSuccessStatus: 200
 };
 
