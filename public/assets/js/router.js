@@ -76,7 +76,7 @@ var app = new Framework7({
                         if (email) {
                             const contacto = email;
                             try {
-                                const response = await fetch('http://localhost:5000/api/contact', {
+                                const response = await fetch('/api/contact', {
                                     method: 'POST',
                                     headers: {
                                         'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ var app = new Framework7({
                         } else if (telefone){
                             const contacto = telefone;
                             try {
-                                const response = await fetch('http://localhost:5000/api/contact', {
+                                const response = await fetch('/api/contact', {
                                     method: 'POST',
                                     headers: {
                                         'Content-Type': 'application/json',
@@ -234,7 +234,7 @@ var app = new Framework7({
 
                         try {
 
-                            const response = await fetch('http://localhost:5000/api/job', {
+                            const response = await fetch('/api/job', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
@@ -293,9 +293,9 @@ function openChallengeus() {
     setTimeout(() => app.dialog.close(), 1000); // Mantido para demonstrar, mas pode ser melhorado.
     app.dialog.prompt(' Existe algum processo ou tarefa que você gostaria de tornar mais fácil, rápido ou eficiente usando tecnologia? Descreva aqui!', function (desafio) {
         app.dialog.prompt('Informe seu nome', function (nome) {
-            app.dialog.prompt(' ' + nome + ' Como gostaria de ser contactado? Insira um email ou nºo de telefone válido.', async function (contacto) {
+            app.dialog.prompt(' ' + nome + ' Como gostaria de ser contactado? Insira um email ou nº de telefone válido.', async function (contacto) {
                 try {
-                    const response = await fetch('http://localhost:5000/api/challenge', {
+                    const response = await fetch('/api/challenge', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
