@@ -1,4 +1,3 @@
-// js/app.js
 var app = new Framework7({
     el: '#app',
     name: 'Laboratório Softhard',
