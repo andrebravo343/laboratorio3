@@ -7,7 +7,7 @@
     --laranja2: #f39200;
     --preto: #0c0c0c;
     --cinza: #ccc;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .navbar,
@@ -16,9 +16,7 @@
 }
 
 .navbar-inner {
-    padding-left: 3%;
-    padding-right: 3%;
-
+    padding-left: 0 2%;
 }
 
 .navbar-inner,
@@ -40,6 +38,10 @@
 
 .logo {
     border-radius: 50%;
+    width:  45px;
+    height: 45px;
+    max-width:50px;
+    max-height: 50px;
 }
 
 
@@ -60,17 +62,16 @@ body {
     position: relative;
 }
 
-/* Estilo da barra de rolagem */
+
 ::-webkit-scrollbar {
     width: 0;
-    /* Largura da barra de rolagem */
 }
 
 .myappfooter {
     width: 100%;
     background-color: var(--b2);
     color: #fff;
-    padding: 20px 0;
+    padding: 2rem 0;
     text-align: center;
     margin-top: 30px;
 }
@@ -149,9 +150,9 @@ body {
 
 .first-banner {
     width: 100%;
-    height: 600px;
+    height: auto;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 
 .first-banner:not(:first-child) img {
@@ -160,13 +161,13 @@ body {
 
 .title-top-fbanner {
     position: absolute;
-    left: 10%;
-    bottom: 10%;
+    left: 5%;
+    bottom: 5%;
     color: var(--b1);
 }
 
 .title-top-fbanner h2 {
-    font-size: 32px;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
 }
 
 .banner-img {
@@ -182,7 +183,7 @@ body {
 
 .swiper {
     width: 100%;
-    height: 100%;
+    height: auto;
     max-height: 450px;
 }
 
@@ -195,9 +196,9 @@ body {
     align-items: start;
     flex-direction: column;
     border-radius: 1rem;
-    max-width: 270px;
+    padding: 2rem;
+    max-width: 90%;
     max-height: 350px;
-    padding: 35px;
 }
 
 .swiper-slide>i {
@@ -242,7 +243,7 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 0 40px;
+    padding: 0 2rem;
     margin-top: 50px;
 }
 
@@ -331,7 +332,7 @@ body {
     flex-direction: column;
     background: var(--preto);
     border-radius: 20px;
-    padding: 25px;
+    padding: 20px;
     overflow-y: hidden;
     animation: forwards;
 }
@@ -352,7 +353,7 @@ body {
     display: flex;
     align-items: center;
     background: #333;
-    width: 100%;
+    width: 97.5%;
     min-height: 55px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -515,7 +516,7 @@ body {
 }
 
 .myapp-company h3 {
-    font-size: 2rem;
+    font-size: clamp(1rem, 1.5rem, 2rem);
 }
 
 .myapp-company__logo {
@@ -598,6 +599,16 @@ body {
     background-color: var(--laranja2);
 }
 
+@media (max-width: 768px) {
+    .myapp-banner {
+        flex-direction: column; /* Colocar banner em coluna */
+    }
+
+    .myapp-team__member__row {
+        flex-direction: column; /* Colocar membros da equipe em coluna */
+    }
+}
+
 @media (min-width: 768px) {
     .myapp-why_us_section {
         flex-direction: row;
@@ -609,7 +620,7 @@ body {
     }
 
     .myapp-why_us_right h2 {
-        font-size: 3vw;
+        font-size: 2rem;
     }
 
     .myapp-why_us_right {
@@ -645,7 +656,7 @@ body {
 }
 
 .myapp-team__member__colum {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     display: inline-block;
     width: 100%;
     max-width: 300px;
@@ -653,7 +664,7 @@ body {
 
 .myapp-team__member__colum img {
     width: 100%;
-    height: 300px;
+    height: auto;
     object-fit: cover;
     border-radius: 10%;
 }
@@ -684,8 +695,8 @@ body {
     flex-direction: column;
     box-sizing: border-box;
     text-align: center;
-    margin: 30px 0;
-    padding: 0 20px;
+    margin: 2rem 0;
+    padding: 0 2%;
 }
 
 .myapp-why_us_colum {
@@ -739,7 +750,7 @@ body {
     color: #fff;
     text-align: center;
     text-decoration: none;
-    padding: 10px;
+    padding: 1rem;
     width: 50%;
     border-radius: 8px;
     margin-top: 20px;
@@ -765,6 +776,10 @@ body {
 
     .myapp-why_us_right {
         margin-left: 20px;
+    }
+
+    .myapp-why_us_right a {
+        width: auto; 
     }
 }
 
