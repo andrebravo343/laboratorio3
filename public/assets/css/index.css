@@ -11,7 +11,7 @@
 }
 
 .navbar,
-.subnavbar{
+.subnavbar {
     border-bottom: 2px solid var(--cinza);
 }
 
@@ -38,10 +38,11 @@
 
 .logo {
     border-radius: 50%;
-    width:  45px;
+    width: 45px;
     height: 45px;
-    max-width:50px;
+    max-width: 50px;
     max-height: 50px;
+    margin-left: 5%;
 }
 
 
@@ -139,11 +140,21 @@ body {
         flex-direction: column;
         align-items: center;
     }
+
+    .popover {
+        right: 5%;
+        max-width: 200px;
+    }
+
+    .logo {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 
-.subnavbar-title {
-    font-size: 22px;
+.subnavbar-title, .title {
+    font-size: clamp(12px, 13px, 16px);
     font-weight: 800;
     margin-left: 5%;
 }
@@ -301,8 +312,8 @@ body {
     color: #fff;
     text-align: center;
     text-decoration: none;
-    padding: 10px;
-    width: 200px;
+    padding: 7px;
+    width: clamp(100px, 150px, 200px);
     border-radius: 8px;
     margin-top: 20px;
     cursor: pointer;
@@ -392,15 +403,15 @@ body {
     white-space: wrap;
     display: flex;
     flex-direction: column;
-    max-width: 100%; 
+    max-width: 100%;
 }
 
-.myapp-service__name h4, .myapp-service__name p {
-    /* Evita que os textos se expandam para fora do contêiner */
+.myapp-service__name h4,
+.myapp-service__name p {
     margin: 0;
     padding: 0;
     max-width: 100%;
-    white-space: normal; /* Permite a quebra de linha, se necessário */
+    white-space: normal;
 }
 
 .myapp-service__name h4 {
@@ -601,11 +612,13 @@ body {
 
 @media (max-width: 768px) {
     .myapp-banner {
-        flex-direction: column; /* Colocar banner em coluna */
+        flex-direction: column;
+        /* Colocar banner em coluna */
     }
 
     .myapp-team__member__row {
-        flex-direction: column; /* Colocar membros da equipe em coluna */
+        flex-direction: column;
+        /* Colocar membros da equipe em coluna */
     }
 }
 
@@ -779,7 +792,7 @@ body {
     }
 
     .myapp-why_us_right a {
-        width: auto; 
+        width: auto;
     }
 }
 
@@ -875,7 +888,7 @@ body {
     justify-content: space-between;
     margin: 0;
     color: #333;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .myapp-faq-answer {
@@ -888,15 +901,15 @@ body {
     margin-bottom: 15px;
 }
 
-.myapp-form-group > label {
+.myapp-form-group>label {
     display: block;
     margin-bottom: 5px;
     color: #333;
-    
+
 }
 
-.myapp-form-group > input,
-.myapp-form-group > textarea {
+.myapp-form-group>input,
+.myapp-form-group>textarea {
     width: 100%;
     padding: 8px;
     border-bottom: 1px solid var(--laranja);
@@ -993,6 +1006,7 @@ body {
         flex-wrap: wrap;
     }
 }
+
 .form-box {
     display: flex;
     flex-direction: column;
@@ -1017,14 +1031,14 @@ body {
     gap: 2em;
 }
 
-.progress ul.progress-steps li{
+.progress ul.progress-steps li {
     position: relative;
     display: flex;
     align-items: flex-start;
     margin-bottom: 2em;
 }
 
-.progress ul.progress-steps li > span {
+.progress ul.progress-steps li>span {
     position: relative;
     width: 40px;
     height: 40px;
@@ -1038,7 +1052,7 @@ body {
     z-index: 1;
 }
 
-.progress ul.progress-steps li.active > span {
+.progress ul.progress-steps li.active>span {
     color: white;
     background-color: var(--laranja);
     border: 1px solid var(--laranja2);
@@ -1067,25 +1081,27 @@ body {
     border-radius: 30px 30px 15px 15px;
 }
 
-form > div {
+form>div {
     max-width: 400px;
     margin: 0 auto;
 }
-form > div p {
+
+form>div p {
     color: var(--cinza);
     margin-bottom: 2em;
 }
-form > div > div:not(.chekbox) {
+
+form>div>div:not(.chekbox) {
     display: flex;
     flex-direction: column;
     margin-bottom: 2em;
 }
 
-form :where(input , select, textarea) {
+form :where(input, select, textarea) {
     height: 40px;
     padding: 0 1em !important;
     border-radius: 7px;
-    outline-color:  var(--laranja2) !important;
+    outline-color: var(--laranja2) !important;
     border: 1px solid var(--b2) !important;
     background-color: transparent;
 }
@@ -1097,7 +1113,7 @@ form label {
 }
 
 form .grouping {
-   display: flex; 
+    display: flex;
 }
 
 form .grouping input {
@@ -1110,26 +1126,27 @@ form .checkbox input {
     height: auto;
 }
 
-form > div:not(.btn-group) {
+form>div:not(.btn-group) {
     display: none;
     -webkit-animation: fadeIn .6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
     animation: fadeIn .6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 @keyframes fadeIn {
-    0%{
+    0% {
         opacity: 0;
         -webkit-transform: translateY(10%);
         transform: translateY(10%);
     }
-    100%{
+
+    100% {
         opacity: 1;
         -webkit-transform: translateY(10%);
         transform: translateY(10%);
     }
 }
 
-form > div.active {
+form>div.active {
     display: block;
 }
 
@@ -1164,15 +1181,15 @@ form > div.active {
 }
 
 .btn-group .btn-submit,
-.form-four.active ~ .btn-group .btn-next {
+.form-four.active~.btn-group .btn-next {
     display: none;
 }
 
-.form-four.active ~ .btn-group .btn-submit {
+.form-four.active~.btn-group .btn-submit {
     display: block;
 }
 
-.form-four.active ~ .btn-group {
+.form-four.active~.btn-group {
     justify-content: space-between;
 }
 
@@ -1185,6 +1202,7 @@ form > div.active {
     .form-box {
         flex-direction: row;
     }
+
     .form-box .progress {
         flex: 1 0 35%;
         min-width: 300px;
@@ -1195,7 +1213,7 @@ form > div.active {
         flex-direction: column;
         gap: 0;
     }
-    
+
     .progress ul.progress-steps li:not(:last-child)::before {
         content: '';
         position: absolute;
@@ -1218,7 +1236,7 @@ form > div.active {
         visibility: visible;
     }
 
-    .progress ul.progress-steps  li p span {
+    .progress ul.progress-steps li p span {
         display: block;
     }
 }
@@ -1226,13 +1244,14 @@ form > div.active {
 .social-container {
     margin: 20px 0;
 }
+
 .social-container a {
-   border: 1px solid #DDD;
-   border-radius: 50%;
-   display: inline-flex;
-   justify-content: center;
-   align-items: center;
-   margin: 0 5px;
-   height: 40px;
-   width: 40px;
+    border: 1px solid #DDD;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
 }
