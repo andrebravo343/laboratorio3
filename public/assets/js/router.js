@@ -1,3 +1,4 @@
+// js/app.js
 var app = new Framework7({
     el: '#app',
     name: 'Laboratório Softhard',
@@ -51,14 +52,14 @@ var app = new Framework7({
                                 document.getElementById("email-field").style.display = "block";
                                 document.getElementById("phone-field").style.display = "none";
                                 document.getElementById("phone").required = false;
-                                document.getElementById("email").required = true; 
+                                document.getElementById("email").required = true;
                             } else {
                                 document.getElementById("email-field").style.display = "none";
                                 document.getElementById("phone-field").style.display = "block";
                                 document.getElementById("email").required = false;
                                 document.getElementById("phone").required = true;
                             }
-                        }); 
+                        });
                     });
 
                     const DuvidasForm = document.getElementById('form-duvidas');
@@ -94,7 +95,7 @@ var app = new Framework7({
                             } catch (e) {
                                 app.dialog.alert(e.message || 'Lamentamos ' + nome + ', houve um erro ao submeter questão! Tente novamente.');
                             }
-                        } else if (telefone){
+                        } else if (telefone) {
                             const contacto = telefone;
                             try {
                                 const response = await fetch('http://localhost:5000/api/contact', {
@@ -117,7 +118,7 @@ var app = new Framework7({
                                 app.dialog.alert(e.message || 'Lamentamos ' + nome + ', houve um erro ao submeter questão! Tente novamente.');
                             }
                         } else {
-                            app.dialog.alert( nome + ' Tem que adicionar uma forma de contacto (email ou número de telefone)');
+                            app.dialog.alert(nome + ' Tem que adicionar uma forma de contacto (email ou número de telefone)');
                         }
 
                     });
@@ -147,51 +148,7 @@ var app = new Framework7({
             },
             on: {
                 pageInit: function (e, page) {
-                    function openVerticalButtons(event) {
-                            const button = event.target;
-                            const serviceName = button.getAttribute('data-service');
-                            app.dialog.preloader();
-                            setTimeout(() => app.dialog.close(), 1000);
 
-    
-    app.dialog.prompt('Informe seu nome', function (nome) {
-
-        app.dialog.prompt(nome + ', como gostaria de ser contactado? Insira um email ou nº de telefone válido.', async function (contacto) {
-
-            const assunto = 'Adesão de Serviço';
-            const descricao = `Gostaria de aderir ao serviço de ${serviceName}`;
-
-            try {
-                const response = await fetch('/api/contat', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        nome,
-                        contacto,
-                        assunto,
-                        descricao,
-                    }),
-                });
-
-                const data = await response.json();
-                
-                if (response.ok) {
-
-                    app.dialog.alert(nome + ', obrigado pelo seu interesse! Em breve entraremos em contacto.', 'Serviço Solicitado');
-                } else {
-
-                    throw new Error(data.message || 'Erro interno ao submeter sua solicitação de serviço!');
-                }
-            } catch (e) {
-                app.dialog.alert(e.message || 'Lamentamos ' + nome + ', houve um erro ao submeter sua solicitação de serviço! Tente novamente.');
-            }
-        });
-    });
-}
-
-                    
                     var swiper = new Swiper(".mySwiper", {
                         slidesPerView: 2,
                         spaceBetween: 20,
@@ -236,9 +193,7 @@ var app = new Framework7({
                 pageInit: function (e, page) {
 
                     app.dialog.alert('Obrigado por querer se juntar a nós! Todos os campos')
-                    // $(document).ready(function () {
 
-                    // });
                     let currentStep = 0;
                     const steps = $(".form-step");
                     const progressSteps = $(".progress-steps li");
@@ -342,13 +297,13 @@ var mainView = app.views.create('.view-main', { url: '/index/' });
 const OpenAlertDemo = () => {
     app.dialog.preloader();
     setTimeout(() =>
-        app.dialog.close(), 1000); // Mantido para demonstrar, mas pode ser melhorado.
+        app.dialog.close(), 1000);
     app.dialog.alert('Falha ao carregar demonstração. Tente mais tarde!');
 }
 
 function openChallengeus() {
     app.dialog.preloader();
-    setTimeout(() => app.dialog.close(), 1000); // Mantido para demonstrar, mas pode ser melhorado.
+    setTimeout(() => app.dialog.close(), 1000);
     app.dialog.prompt(' Existe algum processo ou tarefa que você gostaria de tornar mais fácil, rápido ou eficiente usando tecnologia? Descreva aqui!', function (desafio) {
         app.dialog.prompt('Informe seu nome', function (nome) {
             app.dialog.prompt(' ' + nome + ' Como gostaria de ser contactado? Insira um email ou nºo de telefone válido.', async function (contacto) {
@@ -370,6 +325,44 @@ function openChallengeus() {
                     app.dialog.alert(e.message || 'Lamentamos ' + nome + ', houve um erro ao submeter o seu desafio! Tente novamente.');
                 }
             });
+        });
+    });
+}
+
+function openVerticalButtons(event) {
+    const button = event.target;
+    const serviceName = button.getAttribute('data-service');
+
+    app.dialog.preloader();
+    setTimeout(() => app.dialog.close(), 1000);
+    app.dialog.prompt('Informe seu nome', function (nome) {
+        app.dialog.prompt(nome + ', como gostaria de ser contactado? Insira um email ou nº de telefone válido.', async function (contacto) {
+            const assunto = 'Adesão de Serviço';
+            const descricao = `Gostaria de aderir ao serviço de ${serviceName}`;
+            try {
+                const response = await fetch('/api/contat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        nome,
+                        contacto,
+                        assunto,
+                        descricao,
+                    }),
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    app.dialog.alert(nome + ', obrigado pelo seu interesse! Em breve entraremos em contacto.', 'Serviço Solicitado');
+                } else {
+                    throw new Error(data.message || 'Erro interno ao submeter sua solicitação de serviço!');
+                }
+            } catch (e) {
+                app.dialog.alert(e.message || 'Lamentamos ' + nome + ', houve um erro ao submeter sua solicitação de serviço! Tente novamente.');
+            }
         });
     });
 }
