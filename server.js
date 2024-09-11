@@ -13,7 +13,7 @@ require('dotenv').config();
 const app = express();
 
 const corsOptions = {
-  origin: [ process.env.MyDominio || '*'],
+  origin: [process.env.MyDominio || '*'],
   optionsSuccessStatus: 200
 };
 
@@ -24,12 +24,14 @@ app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); 
 
+
+app.set('trust proxy', 1); 
+
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, 
-  max: 100, 
+  windowMs: 15 * 60 * 1000,
+  max: 100,
 });
 app.use(limiter);
-
 
 app.use('/api/contact', contactRoutes);
 app.use('/api/job', jobRoutes);
