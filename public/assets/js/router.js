@@ -147,6 +147,51 @@ var app = new Framework7({
             },
             on: {
                 pageInit: function (e, page) {
+                    function openVerticalButtons(event) {
+                            const button = event.target;
+                            const serviceName = button.getAttribute('data-service');
+                            app.dialog.preloader();
+                            setTimeout(() => app.dialog.close(), 1000);
+
+    
+    app.dialog.prompt('Informe seu nome', function (nome) {
+
+        app.dialog.prompt(nome + ', como gostaria de ser contactado? Insira um email ou nº de telefone válido.', async function (contacto) {
+
+            const assunto = 'Adesão de Serviço';
+            const descricao = `Gostaria de aderir ao serviço de ${serviceName}`;
+
+            try {
+                const response = await fetch('/api/contat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        nome,
+                        contacto,
+                        assunto,
+                        descricao,
+                    }),
+                });
+
+                const data = await response.json();
+                
+                if (response.ok) {
+
+                    app.dialog.alert(nome + ', obrigado pelo seu interesse! Em breve entraremos em contacto.', 'Serviço Solicitado');
+                } else {
+
+                    throw new Error(data.message || 'Erro interno ao submeter sua solicitação de serviço!');
+                }
+            } catch (e) {
+                app.dialog.alert(e.message || 'Lamentamos ' + nome + ', houve um erro ao submeter sua solicitação de serviço! Tente novamente.');
+            }
+        });
+    });
+}
+
+                    
                     var swiper = new Swiper(".mySwiper", {
                         slidesPerView: 2,
                         spaceBetween: 20,
